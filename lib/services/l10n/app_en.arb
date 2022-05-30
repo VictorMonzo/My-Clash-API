@@ -1,0 +1,11 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "The current Language"
+  },
+
+  "appTitle": "My Clash API",
+  "@appTitle": {
+    "description": "Application Title"
+  }
+}
