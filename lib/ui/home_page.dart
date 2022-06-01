@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/player.dart';
 import '../services/api/clash_royale_api.dart';
+import 'widgets/navigation_drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,6 +20,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.appTitle),
       ),
+
+      // Sidebar
+      drawer: const NavigationDrawer(),
+
       body: Center(
         child: FutureBuilder<Player?>(
           future: getPlayer('#9U09LL'),
