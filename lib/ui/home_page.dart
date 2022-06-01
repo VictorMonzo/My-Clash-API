@@ -32,9 +32,11 @@ class _HomePageState extends State<HomePage> {
               return const CircularProgressIndicator();
             } else if (snapshot.hasData) {
               final player = snapshot.data!;
+              print(player.toString());
               return Text('Player found: ${player.name}');
             } else {
-              return const Text('Error');
+              print('Error: ${snapshot.error}');
+              return Text('Error: ${snapshot.error}');
             }
           },
         ),
